@@ -94,5 +94,48 @@
         });
 
 
+        editor.addButton('tmce_extd_form', {
+           text:'Form',
+           onclick: function () {
+               editor.windowManager.open({
+                   title : 'User Input Form',
+                   body: [
+                       {
+                           type: 'textbox',
+                           name: 'userinput1',
+                           label: 'Name',
+                           value: 'Saber',
+                           multiline:true,
+                           minHeight: 100
+                       },
+                       {
+                           type: 'colorpicker',
+                           name: 'userinput2',
+                           label: 'Color',
+                           value: '#2d5e6f'
+                       },
+                       {
+                           type: 'listbox',
+                           name: 'userinput3',
+                           label: 'Fruits',
+                           values: [
+                               {text: 'Apple', value: 'Apple'},
+                               {text: 'Orange', value: 'Orange'},
+                               {text: 'Banana', value: 'Banana'},
+                           ],
+                       }
+                   ],
+                   onsubmit: (e) => {
+                       // console.log(e);
+                       editor.insertContent("Your name is " + e.data.userinput1);
+                       editor.insertContent("<br>Your favorite color is " + e.data.userinput2);
+                       editor.insertContent("<br>Your favorite fruit is " + e.data.userinput3);
+                   }
+
+               })
+           }
+        });
+
+
     });
 })()

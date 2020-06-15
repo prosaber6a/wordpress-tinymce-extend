@@ -34,6 +34,7 @@ function tmce_extd_buttons( $buttons ) {
 	$buttons[] = 'tmce_extd_button_two';
 	$buttons[] = 'tmce_extd_listbox';
 	$buttons[] = 'tmce_extd_menu';
+	$buttons[] = 'tmce_extd_form';
 
 	return $buttons;
 }
