@@ -31,6 +31,8 @@ function tmce_extd_extrnl_plugins( $plugins ) {
 
 function tmce_extd_buttons( $buttons ) {
 	$buttons[] = 'tmce_extd_button_one';
+	$buttons[] = 'tmce_extd_button_two';
+	$buttons[] = 'tmce_extd_button_three';
 
 	return $buttons;
 }
